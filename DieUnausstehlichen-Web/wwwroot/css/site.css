@@ -1,6 +1,6 @@
 ﻿body {
     margin: 0;
-    font-family: "Yu Gothic";
+    font-family: "Yu Gothic", serif;
 }
 
 .navbar {
@@ -45,4 +45,41 @@
     margin-top: -55px;
     z-index: -500;
     background-image: url("Merge.jpg");
+}
+
+.content {
+    width: 60%;
+    margin: 0 auto;
+    text-align: justify;
+    font-family: "Yu Gothic", serif;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + .content {
+    padding-top: 60px;
+}
+
+.back-to-top {
+    display: none;
+    cursor: pointer;
+    border-radius: 30px;
+    box-shadow: 8px 8px 8px grey;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 60px;
+    height: 60px;
+    background-color: #333333;
+}
+.back-to-top-arrow {
+    user-select: none;
+    padding: 30%;
+    vertical-align: middle;
+    text-align: center;
+    color: white;
 }
