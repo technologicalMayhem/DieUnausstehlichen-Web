@@ -22,7 +22,9 @@ window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
     if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
         toTopButton.style.display = "block";
+        $("#toTopButton").removeClass("slideOutDown").addClass("slideInUp");
     } else {
-        toTopButton.style.display = "none";
+        //toTopButton.style.display = "none";
+        $("#toTopButton").removeClass("slideInUp").addClass("slideOutDown");
     }
 }
