@@ -21,7 +21,13 @@
 }
 
 .navbar-item:hover {
-    background-color: dimgray;
+     background-color: dimgray;
+ }
+.navbar-item:target {
+    background-color: seagreen;
+}
+.navbar-item:current:hover {
+    background-color: darkolivegreen;
 }
 
 .navbar-item-current {
@@ -29,7 +35,7 @@
 }
 
 .navbar-item-current:hover {
-    background-color: darkolivegreen;
+    background-color: darkseagreen;
 }
 
 .main {

@@ -1,25 +1,27 @@
-﻿<!DOCTYPE html>
+﻿@using DieUnausstehlichen_Web.Helper
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="../../wwwroot/css/site.css"/><meta charset="UTF-8">
+    <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="css/site.css">
-    <link rel="stylesheet" href="css/animate.css"/>
+    <link rel="stylesheet" href="/css/site.css">
+    <link rel="stylesheet" href="/css/animate.css"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="js/site.js"></script>
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="/js/site.js"></script>
 </head>
 <body>
 <div class="sticky">
     <ul class="navbar">
-        <a href="">
-            <li class="navbar-item navbar-item-current">Home</li>
+        <a href="@Url.Action("Index", "Home")">
+            <li class="navbar-item @(ViewContext.IsOnPage("Index", "Home") ? "navbar-item-current" : "")">Home</li>
         </a>
-        <a href="">
-            <li class="navbar-item">About</li>
+        <a href="@Url.Action("About", "Home")">
+            <li class="navbar-item @(ViewContext.IsOnPage("About", "Home") ? "navbar-item-current" : "")">About</li>
         </a>
-        <a href="">
-            <li class="navbar-item">Privacy</li>
+        <a href="@Url.Action("Privacy", "Home")">
+            <li class="navbar-item @(ViewContext.IsOnPage("Privacy", "Home") ? "navbar-item-current" : "")">Privacy</li>
         </a>
     </ul>
 </div>
