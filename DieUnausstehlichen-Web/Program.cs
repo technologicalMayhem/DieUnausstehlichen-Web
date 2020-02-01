@@ -20,6 +20,6 @@ namespace DieUnausstehlichen_Web
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder => { webBuilder.UseUrls("http://localhost:5000", "https://localhost:5001", "http://192.168.178.22:443").UseStartup<Startup>(); });
+                .ConfigureWebHostDefaults(webBuilder => { webBuilder.UseStartup<Startup>(); });
     }
 }
