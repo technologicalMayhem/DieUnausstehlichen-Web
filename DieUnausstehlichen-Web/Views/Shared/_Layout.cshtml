@@ -1,4 +1,5 @@
 ﻿@using DieUnausstehlichen_Web.Helper
+@using Microsoft.AspNetCore.Mvc.Razor.Compilation
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,15 +15,12 @@
 <body>
 <div class="sticky">
     <ul class="navbar">
-        <a href="@Url.Action("Index", "Home")">
-            <li class="navbar-item @(ViewContext.IsOnPage("Index", "Home") ? "navbar-item-current" : "")">Home</li>
-        </a>
-        <a href="@Url.Action("About", "Home")">
-            <li class="navbar-item @(ViewContext.IsOnPage("About", "Home") ? "navbar-item-current" : "")">About</li>
-        </a>
-        <a href="@Url.Action("Privacy", "Home")">
-            <li class="navbar-item @(ViewContext.IsOnPage("Privacy", "Home") ? "navbar-item-current" : "")">Privacy</li>
-        </a>
+        @Html.NavbarLinks(new[]
+        {
+            new PageHelper.NavbarItem("Index", "Home", "Home"),
+            new PageHelper.NavbarItem("About", "Home", "About"),
+            new PageHelper.NavbarItem("Privacy", "Home", "Privacy")
+        })
     </ul>
 </div>
 <div class="content">
