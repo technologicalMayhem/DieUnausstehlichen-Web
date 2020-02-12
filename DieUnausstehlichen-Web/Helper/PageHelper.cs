@@ -48,13 +48,13 @@ namespace DieUnausstehlichen_Web.Helper
                 li.InnerHtml.Append(item.DisplayName);
                 a.MergeAttribute("href", url.Action(item.Action, item.Controller));
                 a.InnerHtml.AppendHtml(li);
-                builder = builder.AppendHtml(a);
+                builder.AppendHtml(a);
             }
 
             return builder;
         }
 
-        public static bool IsOnPage(this ViewContext viewContext, string action, string controller)
+        private static bool IsOnPage(this ActionContext viewContext, string action, string controller)
         {
             return viewContext.RouteData.Values["action"].Equals(action) &&
                    viewContext.RouteData.Values["controller"].Equals(controller);
